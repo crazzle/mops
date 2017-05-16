@@ -1,0 +1,28 @@
+File: mp.dtd
+------------------------------------------------------------------
+<!ELEMENT mp-list (mp)>
+<!ELEMENT mp (name,project-list,resources)>
+<!ELEMENT project-list (project)+>
+<!ELEMENT project (filename,start)>
+<!ELEMENT start (#PCDATA)>
+<!ELEMENT filename (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT resources (resource,resource,resource,resource)>
+<!ELEMENT resource (#PCDATA)>
+<!ELEMENT resource (#PCDATA)>
+<!ELEMENT resource (#PCDATA)>
+<!ELEMENT resource (#PCDATA)>
+
+
+File: JobInitiator.java
+------------------------------------------------------------------
+private void printSwitchList() {
+	for (int i = 0; i < switchList.size(); i++) {
+		System.out.println("Level: " + i);
+		System.out.print("id's in subList: ");
+		for (int j = 0; j < switchList.get(i).size(); j++) {
+			System.out.print(switchList.get(i).get(j).getId() + " ");
+		}
+		System.out.println("\n");
+	}
+}
